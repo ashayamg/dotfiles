@@ -62,7 +62,7 @@ NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'hewes/unite-gtags'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'vim-scripts/camelcasemotion.vim'
+NeoBundle 'camelcasemotion'
 
 "
 "" You can specify revision/branch/tag.
