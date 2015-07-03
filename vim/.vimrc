@@ -237,7 +237,9 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_theme = 'ubaryd'
+let g:airline_section_y = ''
 
+set ttimeoutlen=50
 
 "imap 0 )
 "imap ) 0
