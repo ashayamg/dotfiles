@@ -241,8 +241,8 @@ let g:airline_section_y = ''
 
 set ttimeoutlen=50
 
-"imap 0 )
-"imap ) 0
+inoremap 0 )
+inoremap ) 0
 inoremap 1 !
 inoremap ! 1
 inoremap 2 @
