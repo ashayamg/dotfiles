@@ -1,5 +1,6 @@
 #!/bin/bash
 #vim
+set -x
 if (( $# < 3 ))
 then 
   echo "Usage: cleanserver.sh <user> <ip> <port>"
