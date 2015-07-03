@@ -48,6 +48,22 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/unite-outline'
+"NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'vim-scripts/gtags.vim'
+NeoBundle 'hewes/unite-gtags'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'vim-scripts/camelcasemotion.vim'
+
 "
 "" You can specify revision/branch/tag.
 ""NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -197,21 +213,6 @@ let g:unite_source_grep_recursive_opt=''
 endif
 nnoremap <leader>t :Unite -auto-resize file_mru file_rec/async<cr>
 
-
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/unite-outline'
-"NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'vim-scripts/gtags.vim'
-NeoBundle 'hewes/unite-gtags'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'vim-scripts/camelcasemotion.vim'
 
 "----- airline
 set laststatus=2
