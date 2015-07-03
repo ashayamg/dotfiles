@@ -1,5 +1,6 @@
 #!/bin/bash
 set -x
+git clean -fd
 rm -rf ~/.vimrc
 rm -rf ~/.vim
 ln -sf `pwd`/vim/.vimrc ~/.vimrc 
