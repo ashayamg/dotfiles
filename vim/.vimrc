@@ -47,7 +47,7 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 if (v:version < 703)
-  NeoBundle 'Shougo/unite.vim', { 'rev' : 'ed765879071263968914d436e1f887e67abc89b1'}
+  NeoBundle 'Shougo/unite.vim', { 'rev' : '6ce55766c3bf8475'}
 else
   NeoBundle 'Shougo/unite.vim'
 endif
