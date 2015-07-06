@@ -55,8 +55,7 @@ NeoBundle 'Shougo/neomru.vim'
 
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'bling/vim-airline'
 "NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'scrooloose/syntastic'
@@ -68,6 +67,8 @@ NeoBundle 'mhinz/vim-startify'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'camelcasemotion'
 
+let g:commentary_map_backslash = 0
+NeoBundle 'tpope/vim-commentary'
 "
 "" You can specify revision/branch/tag.
 ""NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
