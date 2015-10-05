@@ -16,7 +16,7 @@
 nmap <F5> :w<ENTER>
 nmap <F3> :bp<ENTER>
 nmap <F4> :bn<ENTER>
-nmap <F6> :bp\|bd #<ENTER>
+nmap <F6> :bp\|sp\|bn\|bd <ENTER>
 imap <F5> <ESC>:w<ENTER>i
 
 "NeoBundle Scripts-----------------------------
@@ -55,7 +55,10 @@ NeoBundle 'Shougo/neomru.vim'
 
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'easymotion/vim-easymotion'
+" if (v:version >= 730)
+"   NeoBundle 'easymotion/vim-easymotion'
+" endif
+NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'bling/vim-airline'
 "NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'scrooloose/syntastic'
