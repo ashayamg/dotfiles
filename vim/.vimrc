@@ -1,7 +1,7 @@
 :set t_Co=256
 :syntax enable
 :set sw=2
-:colorscheme oceanblack
+:colorscheme 256-grayvim
 :set hlsearch
 :filetype on
 :filetype indent on
@@ -16,7 +16,7 @@
 nmap <F5> :w<ENTER>
 nmap <F3> :bp<ENTER>
 nmap <F4> :bn<ENTER>
-nmap <F6> :bp\|sp\|bn\|bd <ENTER>
+nmap <F6> :b#\|bd#<ENTER>
 imap <F5> <ESC>:w<ENTER>i
 
 "NeoBundle Scripts-----------------------------
@@ -51,7 +51,6 @@ if (v:version < 703)
 else
   NeoBundle 'Shougo/unite.vim'
 endif
-NeoBundle 'Shougo/neomru.vim'
 
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-fugitive'
@@ -69,6 +68,8 @@ NeoBundle 'hewes/unite-gtags'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'camelcasemotion'
+NeoBundle 'junegunn/fzf'
+NeoBundle 'junegunn/fzf.vim'
 
 let g:commentary_map_backslash = 0
 NeoBundle 'tpope/vim-commentary'
@@ -205,8 +206,8 @@ endif
 
 
 "Unite
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#filters#sorter_default#use(['sorter_rank'])
 "call unite#custom#source('file_rec/async','sorters','sorter_rank', )
 " replacing unite with ctrl-p
 let g:unite_data_directory='~/.vim/.cache/unite'
@@ -219,7 +220,8 @@ let g:unite_source_grep_command='ag'
 let g:unite_source_grep_default_opts='--nocolor --nogroup -S -C4'
 let g:unite_source_grep_recursive_opt=''
 endif
-nnoremap <leader>t :Unite -auto-resize file_mru file_rec/async<cr>
+nnoremap <leader>t :FZF<cr>
+nnoremap <leader>d :call fzf#vim#tags(expand('<cword>'), {'options': '--exact --select-1 --exit-0'})<CR>
 
 
 "----- airline
@@ -275,3 +277,18 @@ set title
 set hidden
 set smartindent
 set makeprg=scons
+let g:fzf_colors =
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
+
