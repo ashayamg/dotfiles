@@ -1,7 +1,7 @@
 :set t_Co=256
 :syntax enable
 :set sw=2
-:colorscheme 256-grayvim
+:colorscheme molokai
 :set hlsearch
 :filetype on
 :filetype indent on
@@ -59,6 +59,7 @@ NeoBundle 'tpope/vim-fugitive'
 " endif
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 "NeoBundle 'Townk/vim-autoclose'
 "NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/unite-outline'
@@ -270,33 +271,11 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_theme = 'ubaryd'
+let g:airline_theme = 'powerlineish'
 let g:airline_section_y = ''
 
 set ttimeoutlen=50
 
-inoremap 0 )
-inoremap ) 0
-inoremap 1 !
-inoremap ! 1
-inoremap 2 @
-inoremap @ 2
-inoremap 3 #
-inoremap # 3
-inoremap 4 $
-inoremap $ 4
-inoremap 5 %
-inoremap % 5
-inoremap 6 ^
-inoremap ^ 6
-inoremap 7 &
-inoremap & 7
-inoremap 8 *
-inoremap * 8
-inoremap 9 (
-inoremap ( 9
-nnoremap ` '
-nnoremap ' `
 
 :command -nargs=1 Todolist noautocmd vimgrep /TODO/j <args>/**/*
 set wildmode=list:longest
@@ -305,6 +284,7 @@ set title
 set hidden
 set smartindent
 set makeprg=scons
+let g:molokai_original =1
 let g:fzf_colors =
       \ { 'fg':      ['fg', 'Normal'],
       \ 'bg':      ['bg', 'Normal'],
