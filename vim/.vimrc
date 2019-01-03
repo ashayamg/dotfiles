@@ -1,7 +1,6 @@
 :set t_Co=256
 :syntax enable
 :set sw=2
-:colorscheme molokai
 :set hlsearch
 :filetype on
 :filetype indent on
@@ -35,6 +34,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
+NeoBundle 'tomasr/molokai'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -300,3 +300,4 @@ let g:fzf_colors =
       \ 'spinner': ['fg', 'Label'],
       \ 'header':  ['fg', 'Comment'] }
 
+:colorscheme molokai
